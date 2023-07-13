@@ -1,0 +1,4 @@
+### get pong
+
+GET http://localhost:6666/v1/pong
+
