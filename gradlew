@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# ignore java_home
+JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/"
+echo "JAVA_HOME overriden to '$JAVA_HOME'"
+
 #
 # Copyright © 2015-2021 the original authors.
 #
