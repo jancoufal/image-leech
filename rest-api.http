@@ -6,3 +6,7 @@ GET http://localhost:6666/v1/pong
 
 GET http://localhost:6666/v1/error
 
+### no-op scrap
+
+GET http://localhost:6666/scrap/abc
+

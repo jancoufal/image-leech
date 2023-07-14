@@ -1,5 +1,6 @@
 package cz.iddqd.imageleech.execution;
 
-public record RequestItem()
+public enum ScrapSource
 {
+	NOOP
 }
