@@ -12,7 +12,6 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.apache.juli.logging.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -31,7 +30,7 @@ public class Scrap
 	@Inject
 	public Scrap(ScrapperTaskQueue scrapperTaskQueue)
 	{
-		LOG.debug("Initializing {}", Scrap.class.getSimpleName());
+		LOG.debug("Initializing {} (scrapperTaskQueue => {})", Scrap.class.getSimpleName(), scrapperTaskQueue);
 
 		this.scrapperTaskQueue = Objects.requireNonNull(scrapperTaskQueue);
 	}
