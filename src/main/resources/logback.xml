@@ -1,4 +1,4 @@
-˚<configuration>
+<configuration>
     <!-- Rolling file appender for debug logging -->
     <!-- appender name="rolling-debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>./logs/debug.log</file>
