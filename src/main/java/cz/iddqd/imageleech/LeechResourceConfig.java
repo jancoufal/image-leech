@@ -1,6 +1,6 @@
 package cz.iddqd.imageleech;
 
-import cz.iddqd.imageleech.execution.ScrapperTaskQueueImpl;
+import cz.iddqd.imageleech.execution.ScrapperTaskQueueExecutorImpl;
 import cz.iddqd.imageleech.service.Pong;
 import cz.iddqd.imageleech.service.Scrap;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -18,7 +18,7 @@ public class LeechResourceConfig extends ResourceConfig
 		LOG.info("Initializing {}.", LeechResourceConfig.class.getSimpleName());
 
 		// singletons
-		register(ScrapperTaskQueueImpl.class);
+		register(ScrapperTaskQueueExecutorImpl.class);
 
 		// services
 		register(Pong.class);

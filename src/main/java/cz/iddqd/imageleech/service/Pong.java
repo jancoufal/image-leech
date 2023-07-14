@@ -1,6 +1,6 @@
 package cz.iddqd.imageleech.service;
 
-import cz.iddqd.imageleech.execution.ScrapperTaskQueue;
+import cz.iddqd.imageleech.execution.ScrapperTaskQueueExecutor;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -21,20 +21,20 @@ public class Pong
 {
 	private static final Logger LOG = LoggerFactory.getLogger(Pong.class);
 
-	private final ScrapperTaskQueue scrapperTaskQueue;
+	private final ScrapperTaskQueueExecutor scrapperTaskQueueExecutor;
 
 	@Inject
-	public Pong(ScrapperTaskQueue scrapperTaskQueue)
+	public Pong(ScrapperTaskQueueExecutor scrapperTaskQueueExecutor)
 	{
 		LOG.debug("Initializing {}", Pong.class.getSimpleName());
 
-		this.scrapperTaskQueue = Objects.requireNonNull(scrapperTaskQueue);
+		this.scrapperTaskQueueExecutor = Objects.requireNonNull(scrapperTaskQueueExecutor);
 	}
 
 	@GET @Path("pong")
 	public Response getPong()
 	{
-		return Response.status(Response.Status.OK).entity(scrapperTaskQueue).build();
+		return Response.status(Response.Status.OK).entity(scrapperTaskQueueExecutor).build();
 	}
 
 	@GET @Path("error")
