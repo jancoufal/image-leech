@@ -20,7 +20,7 @@ public class ScrapperTaskQueueImpl implements ScrapperTaskQueue
 	@Override
 	public ScrapTaskId enqueue(@Nonnull ScrapRequest scrapRequest)
 	{
-		return new ScrapTaskId("test-guid");
+		return ScrapTaskId.create();
 	}
 
 	@Override
